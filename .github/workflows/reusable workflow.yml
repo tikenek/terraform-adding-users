@@ -13,8 +13,6 @@ jobs:
     env_aws_session_token: ${{secrets.AWS_SESSION_TOKEN}}  
     
     
-    
- 
 
 #jobs:
 #  sync:
