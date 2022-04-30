@@ -1,0 +1,24 @@
+name: Reusable Workflow apply
+
+on: 
+   pull_request:
+       types:
+       branches: 
+           - master
+           
+   workflow_dispatch:
+  #push:
+    #paths:
+  
+ jobs:
+  #Dev:
+    uses: tikenek/github_runners/.github/workflows/terraform.yml
+    with:
+     # envName: dev
+    secrets:
+      env_aws_access_key_id: ${{secrets.AWS_ACCESS_KEY_ID}}
+      env_aws_secret_access_key: ${{secrets.AWS_SECRET_ACCESS_KEY}}
+      env_aws_session_token: ${{secrets.AWS_SESSION_TOKEN}}     
+     
+    #steps:
+     # - uses: actions/checkout@v2
