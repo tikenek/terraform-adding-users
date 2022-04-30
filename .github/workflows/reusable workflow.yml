@@ -1,18 +1,31 @@
-name: Reusable Workflow apply
-
 on:
   workflow_dispatch:
-  #push:
-    #paths:
 
 jobs:
- #Dev:
-   uses: tikenek/github_runners/.github/workflows/terraform.yml
-      secrets:
-      env_aws_access_key_id: ${{secrets.AWS_ACCESS_KEY_ID}}
-      env_aws_secret_access_key: ${{secrets.AWS_SECRET_ACCESS_KEY}}
-      env_aws_session_token: ${{secrets.AWS_SESSION_TOKEN}}     
-     
-    #steps:
-     # - uses: actions/checkout@v2
-     
+  sync:
+    runs-on: self-hosted
+    
+  - name:
+    uses: tikenek/github_runners/.github/workflows/terraform.yml
+    secrets:
+    env_aws_access_key_id: ${{secrets.AWS_ACCESS_KEY_ID}}
+    env_aws_secret_access_key: ${{secrets.AWS_SECRET_ACCESS_KEY}}
+    env_aws_session_token: ${{secrets.AWS_SESSION_TOKEN}}  
+    
+    
+    
+ 
+
+#jobs:
+#  sync:
+#    runs-on: self-hosted
+
+#    steps:
+#      - uses: actions/checkout@v2
+      
+#      - name: reuse terraform apply template
+#        uses: tikenek/github_runners/.github/workflows/terraform.yml
+#        secrets:
+#         env_aws_access_key_id: ${{secrets.AWS_ACCESS_KEY_ID}}
+#         env_aws_secret_access_key: ${{secrets.AWS_SECRET_ACCESS_KEY}}
+#         env_aws_session_token: ${{secrets.AWS_SESSION_TOKEN}} 
