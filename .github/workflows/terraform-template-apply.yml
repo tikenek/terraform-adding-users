@@ -11,14 +11,6 @@ on:
       env:
         required: true 
  
-
-#    paths:
-#    - 'your folder's name here/**'
-#    - '.github/workflows/terraform.yml'
-#  pull_request:
-#    paths:
-#    - 'your folder name here/**'
-#    - '.github/workflows/terraform.yml'
 env:
     AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
     AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
