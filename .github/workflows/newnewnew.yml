@@ -7,8 +7,7 @@ on:
 
 jobs:
   call-workflow:
-    uses: tikenek/terraform-adding-users/.github/workflows/terraform-template-apply.yml@v.1
-
+    uses: tikenek/terraform-adding-users/.github/workflows/terraform-template-apply.yml@v1
  
 env:
     AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
