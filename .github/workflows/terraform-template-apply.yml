@@ -2,11 +2,11 @@ name: 'Terraform apply template'
 
 on:
   workflow_call:
-    inputs:
-      path:
-        description: 'Specifies the path of the root terraform module.'
-        required: true
-        type: string
+#    inputs:
+#      path:
+#        description: 'Specifies the path of the root terraform module.'
+#        required: true
+#        type: string
     secrets:
       env:
         required: true 
