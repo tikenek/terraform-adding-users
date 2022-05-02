@@ -1,0 +1,13 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: self-hosted
+    
+  - name: Reuse Terraform apply template
+    uses: tikenek/Sequoia-pj/.github/workflows/template-apply.yml
+    secrets:
+    env_aws_access_key_id: ${{secrets.AWS_ACCESS_KEY_ID}}
+    env_aws_secret_access_key: ${{secrets.AWS_SECRET_ACCESS_KEY}}
+    env_aws_session_token: ${{secrets.AWS_SESSION_TOKEN}} 
