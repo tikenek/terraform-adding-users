@@ -7,7 +7,7 @@ on:
 
 jobs:
   call-workflow:
-    uses: tikenek/terraform-adding-users/.github/workflows/terraform-template-apply.yml@@v1
+    uses: tikenek/terraform-adding-users/.github/workflows/terraform-template-apply.yml@v1
 
  
 env:
