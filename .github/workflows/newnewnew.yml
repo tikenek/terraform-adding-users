@@ -17,7 +17,8 @@ jobs:
       - uses: actions/checkout@v2
       
       - name: test terraform apply workflow 
-        uses: tikenek/github_runners/.github/workflows/terraform.yml@v1.0.0.b
+        uses: tikenek/terraform-adding-users/.github/workflows/terraform-template-apply.yml@v1.0.0.b
+        
         with:
           # URL of gitHub public upstream repo
          # upstream_repo: "https://github.com/actions/starter-workflows.git"
